@@ -1,0 +1,18 @@
+module decoder2_4_tb;
+  reg [1:0]a;
+  wire [3:0]y;
+  decoder2_4 dut (.a(a),.y(y));
+  initial begin 
+    $monitor("a=%b,y=%b",a,y);
+    a=2'b00;
+    #5;
+    a=2'b01;
+    #5;
+    a=2'b10;
+    #5;
+    a=2'b11;
+    #5;
+    $finish;
+  end
+endmodule
+    
